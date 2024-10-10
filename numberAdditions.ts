@@ -10,7 +10,7 @@ export function add(numbers: string) {
     const negativeNumbers: number[] = [];
     allNumbers.forEach((num) => {
         if (num < 0) negativeNumbers.push(num);
-        else sum += num;
+        else if (num < 1000) sum += num;
     })
     if (negativeNumbers.length) {
         const errorMessage = 'negative numbers not allowed ' + negativeNumbers.join(',');
